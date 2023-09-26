@@ -7,6 +7,8 @@ use Illuminate\Support\Facades\Route;
 //import model
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\ProjectController;
+use App\Http\Controllers\Admin\TypeController;
+
 use Faker\Guesser\Name;
 
 /*
@@ -36,6 +38,8 @@ Route::middleware(['auth', 'verified'])
         //cosi le proteggerei tutte: ( di quella categoria.)
         // Route::resource('posts' , PostController::class);
         Route::resource('projects', ProjectController::class);
+        Route::resource('types', TypeController::class);
+
     });
     
     

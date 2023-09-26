@@ -24,7 +24,14 @@ class Project extends Model
             
     
         ];
-
+        /*
+            Relationships
+        */
+        
+        public function type()
+        {
+            return $this->belongsTo(Type::class);
+        }
 
     //$guarded per i non mass assignment
 }
